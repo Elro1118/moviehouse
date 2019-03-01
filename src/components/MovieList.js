@@ -13,7 +13,7 @@ class MovieList extends Component {
       .then(data => {
         console.log({ data })
         this.setState({
-          movies: data.results
+          movies: this.state.movies.concat(data.results)
         })
       })
     console.log(this.state.movies)
