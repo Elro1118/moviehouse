@@ -22,12 +22,16 @@ class App extends Component {
   }
 
   render() {
-    ;<Router>
-      <Switch>
-        <Route exact path="/" component={MovieList} />
-        <Route exact path="/Movie/:movieId" component={MovieDetail} />
-      </Switch>
-    </Router>
+    return (
+      <>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={MovieList} />
+            <Route exact path="/Movie:/:movieId" component={MovieDetail} />
+          </Switch>
+        </Router>
+      </>
+    )
   }
 }
 
