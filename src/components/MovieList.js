@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-// import axios from 'axios'
 import Movie from './Movie'
+
 class MovieList extends Component {
   state = {
     movies: []
@@ -23,7 +23,7 @@ class MovieList extends Component {
   render() {
     return (
       <>
-        <h3>Popular Movies</h3>
+        <h2>MOVIE NOW PLAYING</h2>
         <div className="movies-section">
           {this.state.movies
             .sort(

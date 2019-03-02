@@ -10,6 +10,7 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
 .movies-section {
   display: flex;
   flex-wrap: wrap;
@@ -33,28 +34,45 @@ body {
   width: 12rem;
   padding: 0.5rem;
 }
+
 .detail-section {
   flex: 2;
   color: #4d4d4d;
   font-size: 0.8rem;
   text-align: justify;
 }
+
 .header-section {
   flex: 1;
   font-size: 0.8rem;
   text-align: justify;
 }
+
 .date-section {
   margin: 0rem;
   color: rgba(0, 0, 0, 0.6);
 }
+
 .ImageSection {
   flex: 1;
   order: 1;
 }
+
 .footer-section {
   flex: 1;
   color: #000000;
   font-size: 0.8rem;
   text-align: justify;
+}
+
+/* -------- */
+.castDetail-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.ProfileImg {
+  padding: 1rem;
 }

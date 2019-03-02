@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-router-dom'
+import CastDetail from './CastDetail'
 
 class MovieDetail extends Component {
   state = {
@@ -18,22 +18,26 @@ class MovieDetail extends Component {
       .then(data => {
         console.log({ data })
         this.setState({
-          castData: data.cast
+          castData: data.cast,
+          movieId: data.id
         })
-        console.log(this.state.castData)
       })
+    console.log(this.state.castData)
   }
 
   render() {
     return (
       <>
+        <h2>ABOUT MOVIE</h2>
         {this.state.castData.map(movie => {
           return (
-            <>
-              <h3>{movie.character}</h3>
-              <h3>{movie.name}</h3>
-              <img src={movie.profile_path} alt={movie.name} />
-            </>
+            <CastDetail
+              key={movie.cast_id}
+              name={movie.name}
+              character={movie.character}
+              imgURL={movie.profile_path}
+              movieId={movie.id}
+            />
           )
         })}
       </>
@@ -42,38 +46,3 @@ class MovieDetail extends Component {
 }
 
 export default MovieDetail
-
-{
-  /* <main> */
-}
-{
-  /* <header>
-                <h1>MovieHouse, Cine, 영화관</h1>
-                <h2>Movies, Pelicula, 상영작</h2>
-              </header> */
-}
-
-{
-  /* <section className="details"> */
-}
-
-{
-  /* <Movie>                
-                cast.character={movie.name}
-                dateMovie={new Date(movie.release_date).toDateString()}
-                detail={movie.overview}
-                urlImg={movie.poster_path}
-              /> */
-}
-{
-  /* <h3>{this.props.character}</h3>
-                  <h3>{this.props.name}</h3>
-                  <img src="${this.props.profile_path}" />
-                  <h3>{this.props.credit_id}</h3> */
-}
-{
-  /* </section> */
-}
-{
-  /* </main> */
-}
