@@ -5,6 +5,7 @@ import MovieList from './components/MovieList'
 import MovieDetail from './components/MovieDetail'
 
 class App extends Component {
+<<<<<<< HEAD
   // state = {
   //   movieData: [] //data results
   // }
@@ -21,6 +22,8 @@ class App extends Component {
   //     })
   // }
 
+=======
+>>>>>>> 2735c96067d3972494d54599b43b2462b9b357e6
   render() {
     return (
       <>
