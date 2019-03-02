@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
-
+import { Link } from 'react-router-dom'
 class Movie extends Component {
   render() {
     return (
       <div className="movie-section">
-        <div className="detail-section">
+        <div className="header-detail-section">
           <div className="header-section">
             <h3>{this.props.title}</h3>
             <p className="date-section">{this.props.dateMovie}</p>
           </div>
-          <p>{this.props.detail}</p>
+          <p className="detail-section">{this.props.detail}</p>
+          <Link to={`Movie/${this.props.movieId}`}>
+            <p className="footer-section">More info</p>
+          </Link>
         </div>
 
         <img

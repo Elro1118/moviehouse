@@ -25,17 +25,22 @@ class MovieList extends Component {
       <>
         <h3>Popular Movies</h3>
         <div className="movies-section">
-          {this.state.movies.map(movie => {
-            return (
-              <Movie
-                key={movie.id}
-                title={movie.title}
-                dateMovie={new Date(movie.release_date).toDateString()}
-                detail={movie.overview}
-                urlImg={movie.poster_path}
-              />
+          {this.state.movies
+            .sort(
+              (a, b) => Date.parse(b.release_date) - Date.parse(a.release_date)
             )
-          })}
+            .map(movie => {
+              return (
+                <Movie
+                  key={movie.id}
+                  title={movie.title}
+                  dateMovie={new Date(movie.release_date).toDateString()}
+                  detail={movie.overview}
+                  urlImg={movie.poster_path}
+                  movieId={movie.id}
+                />
+              )
+            })}
         </div>
       </>
     )
