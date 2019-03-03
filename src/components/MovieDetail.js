@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import CastDetail from './CastDetail'
+import Background from './Componenet-Background'
 
 class MovieDetail extends Component {
   state = {
     castData: [], //data.cast
     myKey: 'fae89ce6616cd4e865bdfb392495d453',
-    movieId: '399579'
+    movieId: this.props.match.params.movieId
   }
 
   componentDidMount() {
@@ -28,6 +29,7 @@ class MovieDetail extends Component {
   render() {
     return (
       <>
+        <Background detailId={this.state.movieId} />
         <h2>ABOUT MOVIE</h2>
         {this.state.castData.map(movie => {
           return (
