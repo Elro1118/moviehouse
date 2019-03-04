@@ -34,9 +34,9 @@ class MovieList extends Component {
   render() {
     return (
       <>
-        <h2>RANDOM MOVIE</h2>
+        <h2 className="random-title">RANDOM MOVIE</h2>
         <Random urlImgRandom={this.state.urlImageRandom} />
-        <h2>MOVIE NOW PLAYING</h2>
+        <h2 className="movie-title">MOVIE NOW PLAYING</h2>
         <div className="movies-section">
           {this.state.movies
             .sort(
