@@ -21,7 +21,7 @@ class App extends Component {
       .then(data => {
         console.log({ data })
         this.setState({
-          movies: data.results.filter(movie => movie.id == this.props.detailId)
+          movies: data.results.filter(movie => movie.id == this.state.movieId)
         })
       })
     console.log(this.state.movies)
