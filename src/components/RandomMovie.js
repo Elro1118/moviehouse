@@ -4,7 +4,7 @@ class RandomMovie extends Component {
   render() {
     return (
       <img
-        className="ImageSection"
+        className="ImageRandom"
         src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${
           this.props.urlImgRandom
         }`}
