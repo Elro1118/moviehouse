@@ -19,13 +19,10 @@ class App extends Component {
     )
       .then(resp => resp.json())
       .then(data => {
-        console.log({ data })
         this.setState({
           movies: data.results.filter(movie => movie.id == this.state.movieId)
         })
       })
-    console.log(this.state.movies)
-    console.log('mi path ' + this.state.movies.poster_path)
   }
 
   render() {
@@ -43,11 +40,12 @@ class App extends Component {
                 <img
                   className="poster-detail-page"
                   src={this.state.mainUrl + newMovie.poster_path}
+                  alt={newMovie.title}
                 />
-                <div className="title-overview">
-                  <p className="movieTitle">{newMovie.title}</p>
+                <section className="title-overview">
+                  <h2 className="movieTitle">{newMovie.title}</h2>
                   <p className="overview">{newMovie.overview}</p>
-                </div>
+                </section>
               </div>
             </>
           )

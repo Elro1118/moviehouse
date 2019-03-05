@@ -18,13 +18,11 @@ class MovieDetail extends Component {
     )
       .then(resp => resp.json())
       .then(data => {
-        console.log({ data })
         this.setState({
           castData: data.cast,
           movieId: data.id
         })
       })
-    console.log(this.state.castData)
   }
 
   render() {
@@ -36,12 +34,12 @@ class MovieDetail extends Component {
         />
         <Header />
         <h2 className="title">ABOUT MOVIE</h2>
-        <Background detailId={this.state.movieId} />
+        <Background key={this.state.movieId} detailId={this.state.movieId} />
         <div className="pictures-detail">
-          {this.state.castData.map(movie => {
+          {this.state.castData.map((movie, i) => {
             return (
               <CastDetail
-                key={movie.cast_id}
+                key={i} //{movie.cast_id}
                 name={movie.name}
                 character={movie.character}
                 imgURL={movie.profile_path}

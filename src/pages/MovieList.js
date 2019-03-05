@@ -14,6 +14,7 @@ class MovieList extends Component {
   componentDidMount() {
     this.displayMovieList()
     // this.randomPicture()
+    this.timerClock()
   }
 
   displayMovieList = () => {
@@ -25,35 +26,27 @@ class MovieList extends Component {
       .then(resp => resp.json())
       .then(data => {
         let randomIndexTemp = Math.floor(Math.random() * data.results.length)
-        // let tempUrl = data.results[randomIndex].poster_path
 
         this.setState({
           movies: data.results,
-          urlImageRandom: data.results[randomIndexTemp].poster_path, //tempUrl,
+          urlImageRandom: data.results[randomIndexTemp].poster_path,
           lengthArray: data.results.length
         })
       })
   }
 
-  // randomPicture = () => {
-  //   let randomIndex = Math.floor(Math.random() * this.state.lengthArray)
-  //   this.setState({
-  //     urlImageRandom: this.state.movies[randomIndex].poster_path
-  //   })
-  // }
+  randomPicture = () => {
+    let randomIndex = Math.floor(Math.random() * this.state.lengthArray)
+    this.setState({
+      urlImageRandom: this.state.movies[randomIndex].poster_path
+    })
+  }
 
-  // timerClock = () => {
-  //   setInterval(() => {
-  //     document.getElementById('safeTimerDisplay').textContent = '00:' + sec
-  //     sec--
-  //     if (sec === 0) {
-  //       savePeriodTracker()
-  //     }
-  //     if (sec < 0) {
-  //       clearInterval(timer)
-  //     }
-  //   }, 5000)
-  // }
+  timerClock = () => {
+    setInterval(() => {
+      this.randomPicture()
+    }, 3000)
+  }
 
   render() {
     return (
