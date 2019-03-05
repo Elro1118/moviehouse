@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-
 import CastDetail from '../components/CastDetail'
 import Background from '../components/Componenet-Background'
+import Header from '../components/Header'
 
 class MovieDetail extends Component {
   state = {
@@ -30,8 +30,13 @@ class MovieDetail extends Component {
   render() {
     return (
       <>
+        <link
+          href="https://fonts.googleapis.com/css?family=Playfair+Display"
+          rel="stylesheet"
+        />
+        <Header />
+        <h2 className="title">ABOUT MOVIE</h2>
         <Background detailId={this.state.movieId} />
-        <h2>ABOUT MOVIE</h2>
         {this.state.castData.map(movie => {
           return (
             <CastDetail

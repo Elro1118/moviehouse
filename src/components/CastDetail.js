@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Header from './Header'
+
 // import { Link } from 'react-router-dom'
 
 class CastDetail extends Component {
@@ -9,7 +9,6 @@ class CastDetail extends Component {
         {/* <Link to={`Movie/${this.props.movieId}`}>
           <p className="footer-section">More info</p>
         </Link> */}
-        <Header />
         <div className="castDetail-section">
           <img
             className="ProfileImg"
