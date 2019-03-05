@@ -10,10 +10,12 @@ body {
   margin: 0;
   min-height: 100%;
 }
-/* ---------------------------Silvana 's Style Begin------------------------ */
+/* ---------------------------MovieList 's Style Begins------------------------ */
 .movies-section {
   display: flex;
   flex-wrap: wrap;
+  border: 0.1rem solid red;
+  margin: 0 5rem 0 5rem;
 }
 
 .movie-section {
@@ -81,6 +83,8 @@ body {
 .movie-title {
   margin: 1rem;
 }
+/* ---------------------------MovieList component 's Style Ends------------------------ */
+/* ----------------------------Random component 's Style Begins------------------------ */
 .ImageRandom {
   animation-name: move;
   animation-duration: 10s;
@@ -95,4 +99,4 @@ body {
     transform: translateX(72rem);
   }
 }
-/* ---------------------------Silvana 's Style End------------------------ */
+/* ------------------------------Random component 's Style Ends------------------------- */
