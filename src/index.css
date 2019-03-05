@@ -78,7 +78,7 @@ li:hover {
 .detail-section {
   flex: 2;
   color: #c5c2c2;
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-align: justify;
   font-family: 'Playfair Display', serif;
 }
@@ -114,16 +114,33 @@ li:hover {
 }
 
 /* --------Mira + Manny's CSS */
+.pictures-detail {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .castDetail-section {
+  background-color: rgba(245, 245, 255, 0.938);
+  flex: 1;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
+  /* padding: 1px; */
   font-size: 1rem;
+  border: solid rgba(209, 211, 203, 0.794) 1px;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-family: 'Playfair Display';
+  color: rgb(31, 20, 20);
+  box-shadow: 0 2px 8px rgba(153, 146, 146, 0.931);
 }
 
 .ProfileImg {
   padding: 1rem;
-  margin: 1rem;
+  margin: 0rem;
+  max-width: 8rem;
+  max-height: 10rem;
+  border-radius: 0.5rem;
 }
 
 .movie-title {
@@ -141,6 +158,11 @@ li:hover {
   animation-iteration-count: infinite;
 }
 
+.profile-detail {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
 @keyframes move {
   from {
     transform: translateX(-5rem);
@@ -190,22 +212,37 @@ li:hover {
   /* background-image: linear-gradient(rgba  */
   /* background-color: rgba(59, 59, 182, 0.7); */
 }
+.picture-detail {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .moviePreview {
+  display: flex;
   border: solid 1px whitesmoke;
-  margin: 1rem auto;
+  border-radius: 0.3rem;
+  margin: 2rem auto;
   color: rgb(236, 230, 217);
   font-family: 'Playfair Display', serif;
   padding: 2rem;
   flex: 1;
   order: 2;
+  max-width: 40rem;
+}
+
+.poster-detail-page {
+  border-radius: 0.3rem;
+}
+
+.title-overview {
+  flex: 1;
+  padding-left: 2rem;
 }
 
 .movieTitle {
   font-size: 1.8rem;
-
   margin: 1 auto;
-  line-height: bold;
+  font-weight: bold;
 }
 
 .overview {
