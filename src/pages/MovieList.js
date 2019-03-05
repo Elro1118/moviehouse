@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import Movie from './Movie'
-import Random from './RandomMovie'
-import Header from './Header'
+import Header from '../components/Header'
 import Movie from '../components/Movie'
 import Random from '../components/RandomMovie'
 
