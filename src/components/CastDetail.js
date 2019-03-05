@@ -17,6 +17,7 @@ class CastDetail extends Component {
             }`}
             alt={this.props.name}
           />
+
           <h3 className="profile-detail">
             {this.props.name} ({this.props.character})
           </h3>

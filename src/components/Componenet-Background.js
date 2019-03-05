@@ -40,9 +40,14 @@ class App extends Component {
           return (
             <>
               <div className="moviePreview">
-                <img src={this.state.mainUrl + newMovie.poster_path} />
-                <p className="movieTitle">{newMovie.title}</p>
-                <p className="overview">{newMovie.overview}</p>
+                <img
+                  className="poster-detail-page"
+                  src={this.state.mainUrl + newMovie.poster_path}
+                />
+                <div className="title-overview">
+                  <p className="movieTitle">{newMovie.title}</p>
+                  <p className="overview">{newMovie.overview}</p>
+                </div>
               </div>
             </>
           )

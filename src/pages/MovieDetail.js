@@ -37,17 +37,19 @@ class MovieDetail extends Component {
         <Header />
         <h2 className="title">ABOUT MOVIE</h2>
         <Background detailId={this.state.movieId} />
-        {this.state.castData.map(movie => {
-          return (
-            <CastDetail
-              key={movie.cast_id}
-              name={movie.name}
-              character={movie.character}
-              imgURL={movie.profile_path}
-              movieId={movie.id}
-            />
-          )
-        })}
+        <div className="pictures-detail">
+          {this.state.castData.map(movie => {
+            return (
+              <CastDetail
+                key={movie.cast_id}
+                name={movie.name}
+                character={movie.character}
+                imgURL={movie.profile_path}
+                movieId={movie.id}
+              />
+            )
+          })}
+        </div>
       </>
     )
   }
