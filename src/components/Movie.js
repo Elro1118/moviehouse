@@ -8,8 +8,9 @@ class Movie extends Component {
         <div className="header-detail-section">
           <div className="header-section">
             <h3>{this.props.title}</h3>
-            <p className="date-section">{this.props.dateMovie}</p>
           </div>
+          <p className="date-section">{this.props.dateMovie}</p>
+
           <p className="detail-section">{this.props.detail}</p>
           <Link to={`Movie/${this.props.movieId}`}>
             <p className="footer-section">More info</p>
