@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Movie from './Movie'
 import Random from './RandomMovie'
+import Header from './Header'
 
 class MovieList extends Component {
   state = {
@@ -34,9 +35,16 @@ class MovieList extends Component {
   render() {
     return (
       <>
-        <h2 className="random-title">RANDOM MOVIE</h2>
-        <Random urlImgRandom={this.state.urlImageRandom} />
-        <h2 className="movie-title">MOVIE NOW PLAYING</h2>
+        <link
+          href="https://fonts.googleapis.com/css?family=Playfair+Display"
+          rel="stylesheet"
+        />
+        <Header />
+        <section className="random-title">
+          <h2>SDG Pick👀</h2>
+          <Random urlImgRandom={this.state.urlImageRandom} />
+        </section>
+        <h2 className="movie-title">Movies Now Playing</h2>
         <div className="movies-section">
           {this.state.movies
             .sort(
