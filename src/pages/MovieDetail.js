@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import CastDetail from './CastDetail'
 import Background from './Component/Background'
+import CastDetail from '../components/CastDetail'
+import Background from '../components/Component-Background'
 
 class MovieDetail extends Component {
   state = {

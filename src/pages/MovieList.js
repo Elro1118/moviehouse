@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Movie from './Movie'
 import Random from './RandomMovie'
 import Header from './Header'
+import Movie from '../components/Movie'
+import Random from '../components/RandomMovie'
 
 class MovieList extends Component {
   state = {
