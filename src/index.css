@@ -36,7 +36,8 @@ li:hover {
 .random-title {
   width: 25rem;
   height: 23.5rem;
-  border: dotted 0.3rem rgb(245, 245, 240);
+  background-color: rgba(72, 72, 75, 0.5);
+  border: inset 2px rgb(245, 245, 240);
   border-radius: 0.5rem;
   text-align: center;
   text-decoration-line: underline;
@@ -50,6 +51,7 @@ li:hover {
 .movies-section {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 5rem 0 5rem;
 }
 
 .movie-section {
@@ -99,6 +101,7 @@ li:hover {
 .ImageSection {
   flex: 1;
   order: 1;
+  border-radius: 0.5rem;
 }
 
 .footer-section {
@@ -130,6 +133,8 @@ li:hover {
   text-align: center;
   text-shadow: rgba(243, 240, 230, 0.2) 0.2em 0.2em 0.1em;
 }
+/* ---------------------------MovieList component 's Style Ends------------------------ */
+/* ----------------------------Random component 's Style Begins------------------------ */
 .ImageRandom {
   animation-name: move;
   animation-duration: 10s;
@@ -206,3 +211,4 @@ li:hover {
 .overview {
   font-size: 1.1rem;
 }
+/* ------------------------------Random component 's Style Ends------------------------- */

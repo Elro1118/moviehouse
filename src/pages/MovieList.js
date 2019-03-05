@@ -7,11 +7,13 @@ class MovieList extends Component {
   state = {
     movies: [],
     apiKey: 'fae89ce6616cd4e865bdfb392495d453',
-    urlImageRandom: ''
+    urlImageRandom: '',
+    lengthArray: 0
   }
 
   componentDidMount() {
     this.displayMovieList()
+    // this.randomPicture()
   }
 
   displayMovieList = () => {
@@ -22,15 +24,36 @@ class MovieList extends Component {
     )
       .then(resp => resp.json())
       .then(data => {
-        let randomIndex = Math.floor(Math.random() * data.results.length)
-        let tempUrl = data.results[randomIndex].poster_path
+        let randomIndexTemp = Math.floor(Math.random() * data.results.length)
+        // let tempUrl = data.results[randomIndex].poster_path
 
         this.setState({
           movies: data.results,
-          urlImageRandom: tempUrl
+          urlImageRandom: data.results[randomIndexTemp].poster_path, //tempUrl,
+          lengthArray: data.results.length
         })
       })
   }
+
+  // randomPicture = () => {
+  //   let randomIndex = Math.floor(Math.random() * this.state.lengthArray)
+  //   this.setState({
+  //     urlImageRandom: this.state.movies[randomIndex].poster_path
+  //   })
+  // }
+
+  // timerClock = () => {
+  //   setInterval(() => {
+  //     document.getElementById('safeTimerDisplay').textContent = '00:' + sec
+  //     sec--
+  //     if (sec === 0) {
+  //       savePeriodTracker()
+  //     }
+  //     if (sec < 0) {
+  //       clearInterval(timer)
+  //     }
+  //   }, 5000)
+  // }
 
   render() {
     return (
@@ -56,7 +79,15 @@ class MovieList extends Component {
                   key={i}
                   title={movie.title}
                   dateMovie={new Date(movie.release_date).toDateString()}
-                  detail={movie.overview}
+                  detail={
+                    movie.overview.substr(
+                      0,
+                      Math.min(
+                        movie.overview.length,
+                        movie.overview.indexOf('.')
+                      )
+                    ) + ' ...'
+                  }
                   urlImg={movie.poster_path}
                   movieId={movie.id}
                 />
