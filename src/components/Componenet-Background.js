@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-// import moment from 'moment'
-
-// import Movie from './Movie'
 
 class App extends Component {
   state = {
@@ -50,22 +47,6 @@ class App extends Component {
             </>
           )
         })}
-        {/* <header>
-          <h1>Moviehouse</h1>
-        </header>
-        <div>
-          {data.results.map((movie, index) => {
-            return (
-              <Movie
-                key={index}
-                title={movie.title}
-                src={`${baseURL}${movie.poster_path}`}
-                overview={movie.overview}
-                // release_date={moment(movie.release_date).format('MMM Do YY')}
-              />
-            )
-          })}
-        </div> */}
       </main>
     )
   }

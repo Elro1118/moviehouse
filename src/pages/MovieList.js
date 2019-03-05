@@ -13,7 +13,7 @@ class MovieList extends Component {
 
   componentDidMount() {
     this.displayMovieList()
-    // this.randomPicture()
+
     this.timerClock()
   }
 
@@ -45,7 +45,7 @@ class MovieList extends Component {
   timerClock = () => {
     setInterval(() => {
       this.randomPicture()
-    }, 3000)
+    }, 2000)
   }
 
   render() {

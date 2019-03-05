@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
 
-// import { Link } from 'react-router-dom'
-
 class CastDetail extends Component {
   render() {
     return (
       <>
-        {/* <Link to={`Movie/${this.props.movieId}`}>
-          <p className="footer-section">More info</p>
-        </Link> */}
         <div className="castDetail-section">
           <img
             className="ProfileImg"

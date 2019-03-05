@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import CastDetail from '../components/CastDetail'
 import Background from '../components/Componenet-Background'
 import Header from '../components/Header'
+import { Link } from 'react-router-dom'
 
 class MovieDetail extends Component {
   state = {
@@ -33,7 +34,14 @@ class MovieDetail extends Component {
           rel="stylesheet"
         />
         <Header />
-        <h2 className="title">ABOUT MOVIE</h2>
+
+        <h2 className="title">
+          <Link to={'/'}>
+            <span>HOME</span>
+          </Link>
+          {' / '}ABOUT MOVIE
+        </h2>
+
         <Background key={this.state.movieId} detailId={this.state.movieId} />
         <div className="pictures-detail">
           {this.state.castData.map((movie, i) => {
