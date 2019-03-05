@@ -2,29 +2,6 @@
   font: 16px / 1;
 }
 
-.movie-header-background {
-  content: '';
-  /* position: absolute;
-  left: 0;
-  right: 0; */
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  display: block;
-  /* filter: opacity(0.7) contrast(130%); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  /* background-image: url('https://image.tmdb.org/t/p/w1400_and_h450_face/aQXTw3wIWuFMy0beXRiZ1xVKtcf.jpg'); */
-  /* will-change: opacity; */
-  /* transition: filter 1st; */
-  opacity: 0.4;
-  /* fill: alpha(opacity=50) */
-  /* background-image: linear-gradient(rgba  */
-  /* background-color: rgba(59, 59, 182, 0.7); */
-  box-shadow: inset 0 0 0 rgba(49, 49, 218, 0.692);
-}
-
 body {
   margin: 0;
   min-height: 100%;
@@ -80,7 +57,8 @@ li:hover {
   display: flex;
   margin: 1rem;
   margin-left: 1rem;
-  border: 0.1rem rgb(206, 203, 203) solid;
+  border: 1px rgb(206, 203, 203) solid;
+  border-radius: 0.5rem;
   width: 24rem;
   height: 20rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -166,4 +144,65 @@ li:hover {
     transform: translateX(4rem);
   }
 }
-/* ---------------------------Silvana 's Style End------------------------ */
+/* --------2nd page------------------------ */
+
+.title {
+  background-color: rgba(243, 194, 194, 0.842);
+  height: 3rem;
+  color: rgb(48, 47, 47);
+  font-family: 'Limelight';
+  text-align: left;
+  margin: 0;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  text-shadow: rgba(36, 31, 11, 0.2) 0.2em 0.2em 0.2em;
+  font-size: 1.6rem;
+}
+
+.title .h1 {
+  color: red;
+}
+
+.movie-header-background {
+  box-shadow: inset 0 0 0 rgba(49, 49, 218, 0.692);
+  content: '';
+  /* position: absolute;
+          left: 0;
+          right: 0; */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  /* filter: opacity(0.7) contrast(130%); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* background-image: url('https://image.tmdb.org/t/p/w1400_and_h450_face/aQXTw3wIWuFMy0beXRiZ1xVKtcf.jpg'); */
+  /* will-change: opacity; */
+  /* transition: filter 1st; */
+  /* opacity: 0.4; */
+  /* fill: alpha(opacity=50) */
+  /* background-image: linear-gradient(rgba  */
+  /* background-color: rgba(59, 59, 182, 0.7); */
+}
+
+.moviePreview {
+  border: solid 1px whitesmoke;
+  margin: 1rem auto;
+  color: rgb(236, 230, 217);
+  font-family: 'Playfair Display', serif;
+  padding: 2rem;
+  flex: 1;
+  order: 2;
+}
+
+.movieTitle {
+  font-size: 1.8rem;
+
+  margin: 1 auto;
+  line-height: bold;
+}
+
+.overview {
+  font-size: 1.1rem;
+}

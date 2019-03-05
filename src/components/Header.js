@@ -11,7 +11,7 @@ class Header extends Component {
         <div>
           <nav className="header">
             <ul>
-              <li className="menu"> 🎬 SDG MOVIEHOUSE • 영화관 • CINE</li>
+              <li className="menu"> 🎬 SDG MOVIEHOUSE • CINE • 영화관</li>
             </ul>
           </nav>
         </div>

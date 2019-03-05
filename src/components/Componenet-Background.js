@@ -39,9 +39,11 @@ class App extends Component {
         {this.state.movies.map(newMovie => {
           return (
             <>
-              <p>{newMovie.title}</p>
-              <p>{newMovie.overview}</p>
-              <img src={this.state.mainUrl + newMovie.poster_path} />
+              <div className="moviePreview">
+                <img src={this.state.mainUrl + newMovie.poster_path} />
+                <p className="movieTitle">{newMovie.title}</p>
+                <p className="overview">{newMovie.overview}</p>
+              </div>
             </>
           )
         })}
@@ -61,7 +63,6 @@ class App extends Component {
             )
           })}
         </div> */}
-        // {}
       </main>
     )
   }
